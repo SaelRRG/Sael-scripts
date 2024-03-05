@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -33,6 +34,14 @@ int main() {
     quicksort(direccion, ELEMENTOS);
     printf("\nEl arreglo ordenado es:\n");
     mostrar_arreglo(direccion);
+
+    indice = buscar_elemento(numero, direccion);
+    if (indice != -1) {
+        printf("Tu numero es: %d, y su posicion en el arreglo es: %d\n", numero, indice);
+    } else {
+        printf("El numero no se encuentra en el arreglo.\n");
+    }
+
 
     clock_t fin = clock();
     double tiempo_total = (double)(fin - inicio) / CLOCKS_PER_SEC;
